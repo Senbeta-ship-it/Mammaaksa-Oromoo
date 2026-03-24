@@ -6,34 +6,105 @@
     <title>Mammaaksa Oromoo - Home</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', sans-serif;
             background: #1a1a1a;
             color: #fff;
             display: flex;
             flex-direction: column;
-            align-items: center;
             min-height: 100vh;
         }
-
-        /* --- Navigation Menu Style --- */
         nav {
-            width: 100%;
             background: #000;
-            padding: 15px 0;
+            padding: 15px;
             text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
             border-bottom: 2px solid #cc0000;
         }
-
         nav a {
             color: white;
             text-decoration: none;
             margin: 0 15px;
             font-weight: bold;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .card {
+            width: 100%;
+            max-width: 450px;
+            background: #fff;
+            color: #333;
+            padding: 40px 20px;
+            border-radius: 25px;
+            text-align: center;
+            border-bottom: 10px solid #cc0000;
+            border-top: 10px solid #000;
+        }
+        .quote-box {
+            min-height: 100px;
+            background: #f9f9f9;
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 5px solid #cc0000;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        button {
+            background: #000;
+            color: #fff;
+            border: none;
+            padding: 15px;
+            border-radius: 50px;
+            width: 100%;
+            cursor: pointer;
+        }
+        footer {
+            background: #f1f1f1;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #ddd;
+        }
+        .social { margin-top: 10px; }
+        .social img { width: 30px; margin: 0 10px; }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Mammaaksa</a>
+        <a href="videos.html">Viidiyoo</a>
+        <a href="gorsa.html">Gorsa</a>
+        <a href="login.html">Login</a>
+    </nav>
+    <div class="container">
+        <div class="card">
+            <h1>Mammaaksa Oromoo</h1>
+            <div class="quote-box" id="display">"Abbaan dammaa harka isaa damma."</div>
+            <button onclick="newM()">Mammaaksa Biraa</button>
+        </div>
+    </div>
+    <footer>
+        <p>Na qunnamaa:</p>
+        <div class="social">
+            <a href="https://t.me/MAQAA_KEETI"><img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png"></a>
+            <a href="https://www.facebook.com/MAQAA_KEETI"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"></a>
+            <a href="https://www.tiktok.com/@MAQAA_KEETI"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png"></a>
+        </div>
+        <p style="font-size: 10px; margin-top: 10px;">© 2026 Mammaaksa Oromoo</p>
+    </footer>
+    <script>
+        const m = ["Abbaan dammaa harka isaa damma.", "Gamni gorsa beeka.", "Dhugaan ni qallatti malee hin cittu."];
+        function newM() { document.getElementById('display').innerText = m[Math.floor(Math.random() * m.length)]; }
+    </script>
+</body>
+</html>
             font-size: 0.9rem;
             transition: 0.3s;
         }
