@@ -5,75 +5,139 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Viidiyoo - Mammaaksa Oromoo</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #1a1a1a;
-            color: white;
-            text-align: center;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
+        /* Menu Gubbaa */
         nav {
             background-color: #000;
-            padding: 15px;
-            border-bottom: 2px solid #cc0000;
+            padding: 18px 0;
+            border-bottom: 3px solid #cc0000;
+            width: 100%;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
+
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 10px;
+            margin: 0 12px;
             font-weight: bold;
+            font-size: 15px;
         }
-        .container {
+
+        /* Gidduu - Bakka Viidiyoo */
+        .main-content {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             padding: 40px 20px;
         }
+
         .card {
             background: white;
             color: #333;
-            padding: 20px;
-            border-radius: 20px;
+            width: 100%;
             max-width: 500px;
-            margin: 0 auto;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6);
         }
+
+        /* Iframe YouTube Akka Bilbilaan Wal Simu (Responsive) */
         .video-container {
             position: relative;
-            padding-bottom: 56.25%;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
             height: 0;
             overflow: hidden;
-            border-radius: 10px;
+            border-radius: 15px;
+            background: #000;
+            margin: 20px 0;
         }
+
         .video-container iframe {
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%; border: none;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
         }
+
+        /* Button Gara Channel YouTube */
+        .btn-youtube {
+            background: #cc0000;
+            color: white;
+            border: none;
+            padding: 15px;
+            border-radius: 50px;
+            width: 100%;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.3s;
+        }
+
+        .btn-youtube:hover {
+            background: #ff0000;
+            transform: translateY(-2px);
+        }
+
+        /* Jala */
         footer {
-            background: #f1f1f1;
+            background-color: #f1f1f1;
             color: #333;
             padding: 20px;
-            margin-top: 50px;
+            text-align: center;
         }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Mammaaksa</a>
-    <a href="videos.html" style="color: #cc0000;">Viidiyoo</a>
-    <a href="gorsa.html">Gorsa</a>
-</nav>
+    <nav>
+        <a href="index.html">Mammaaksa</a>
+        <a href="videos.html" style="color: #cc0000;">Viidiyoo</a>
+        <a href="gorsa.html">Gorsa</a>
+    </nav>
 
-<div class="container">
-    <div class="card">
-        <h1>Viidiyoo YouTube</h1>
-        <div class="video-container">
-            <iframe src="https://www.youtube.com"></iframe>
+    <div class="main-content">
+        <div class="card">
+            <h2 style="color: #000;">Viidiyoo YouTube</h2>
+            <p style="color: #666; font-size: 14px;">Viidiyoo koo asirratti ilaalaa</p>
+            
+            <div class="video-container">
+                <iframe 
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                    title="YouTube video player" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            
+            <p style="margin-bottom: 15px; font-size: 14px;">Viidiyoo dabalataa argachuuf:</p>
+            
+            <a href="https://www.youtube.com/@https://www.youtube.com/@mykomik-y3p" target="_blank" class="btn-youtube">
+                Gara YouTube Channel Koo Deemi
+            </a>
         </div>
-        <p>Hordofuu hin dagatinaa! fuuli kuun yeroof hojii hin jalqabne nuuf obsaa🙏</p>
     </div>
-</div>
 
-<footer>
-    <p>© 2026 Mammaaksa Oromoo</p>
-</footer>
+    <footer>
+        <p style="font-size: 12px;">© 2026 Mammaaksa Oromoo</p>
+    </footer>
 
 </body>
 </html>
