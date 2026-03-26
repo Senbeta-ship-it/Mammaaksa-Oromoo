@@ -1,1 +1,186 @@
+<!DOCTYPE html>
+<html lang="om">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mammaaksa Oromoo - Layout Miidhagaa</title>
+    <style>
+        /* 1. Reset fi Background */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #111827; /* Gurraacha halkan fakkaatu */
+            color: white;
+            min-height: 100vh;
+        }
+
+        /* 2. Menu Gubbaa (Navbar) */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            border-bottom: 3px solid #cc0000;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #f3f4f6;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+
+        nav a:hover { color: #cc0000; }
+
+        /* 3. Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: #cc0000;
+            margin-bottom: 10px;
+        }
+
+        /* 4. Search Bar */
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 30px auto;
+            padding: 0 20px;
+        }
+
+        .search-box {
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            border: 2px solid #374151;
+            background: #1f2937;
+            color: white;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .search-box:focus { border-color: #cc0000; }
+
+        /* 5. GRID LAYOUT (Bifa Bareedaa) */
+        .mammaaksa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 6. Card Design */
+        .m-card {
+            background: #ffffff; /* Card-onni akka ifanitti adii godheera */
+            color: #111827;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 10px solid #cc0000;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 150px;
+        }
+
+        .m-card:hover {
+            transform: translateY(-5px);
+            background: #f9fafb;
+        }
+
+        .m-card p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            font-style: italic;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            opacity: 0.6;
+            font-size: 12px;
+        }
+
+        /* Bilbilaaf */
+        @media (max-width: 600px) {
+            .mammaaksa-grid { grid-template-columns: 1fr; }
+            header h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Mana</a>
+        <a href="mammaaksa.html" style="color: #cc0000;">Mammaaksa</a>
+        <a href="videos.html">Viidiyoo</a>
+       
+    </nav>
+
+    <header>
+        <h1>📖 Mammaaksa Oromoo</h1>
+        <p>Aadaa keenya haa guddisnu</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-box" placeholder="Mammaaksa barbaadi..." onkeyup="searchMammaaksa()">
+    </div>
+
+    <div id="mammaaksa-list" class="mammaaksa-grid">
+        <div class="m-card"><p>"Abbaan daadhii dhugeef, kan lafatti naqe hin dhuunfatu."</p></div>
+        <div class="m-card"><p>"Harka qullaa deebi'uun nama hin dhibu, harka qullaa ba'uutu nama dhibe."</p></div>
+        <div class="m-card"><p>"Lukkun haadha ishee hin dhiittuu, kan dhiittullee hin miidhuu."</p></div>
+        <div class="m-card"><p>"Gubaan hamma dhuunfaati, beelli hamma gandaati."</p></div>
+        <div class="m-card"><p>"Kan dhufe hin hafu, kan hafe hin dhufu."</p></div>
+        <div class="m-card"><p>"Namni mana gubaa jiru, gabaa iyyu hin dhiisu."</p></div>
+        <div class="m-card"><p>"Osoo gubattu kofalti, adurreen mana gubaa."</p></div>
+        <div class="m-card"><p>"Dubbiin jaarsaa madaa garaati."</p></div>
+        <div class="m-card"><p>"Haati hattuun intala hin amantu."</p></div>
+        <div class="m-card"><p>"Muka jallaa qajeelchuun dhibee, nama jallaa qajeelchuun lafee."</p></div>
+        <div class="m-card"><p>"Wallaalaan koflaa dubbata, beekaan gadi jedhee dubbata."</p></div>
+        <div class="m-card"><p>"Iji madaa hin argu, gurri madaa hin dhaga'u."</p></div>
+        <div class="m-card"><p>"Qabeenyi ija firaati, dhukkubni ija diinaati."</p></div>
+        <div class="m-card"><p>"Hirkattuun harka hin dhuunfattu."</p></div>
+        <div class="m-card"><p>"Namni kajeelaan, galgala kofla."</p></div>
+        <div class="m-card"><p>"Yoo abbaan manaa iyyu, ollaan dirmata."</p></div>
+        <div class="m-card"><p>"Kan lafatti gataniin, kan gubbaa hin dhuunfatan."</p></div>
+        <div class="m-card"><p>"Namni du'uuf jiru, hancuufa hin liqimsu."</p></div>
+        <div class="m-card"><p>"Hojiin hantuutaa, adurree kofalchiisa."</p></div>
+        <div class="m-card"><p>"Ganama ka'uun, waaqatti dhiyachuudha."</p></div>
+    </div>
+
+    <footer>
+        © 2026 Mammaaksa Oromoo | Senbetawinner
+    </footer>
+
+    <script>
+        function searchMammaaksa() {
+            let input = document.getElementById('searchInput').value.toLowerCase();
+            let cards = document.getElementsByClassName('m-card');
+
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].innerText.toLowerCase();
+                if (text.includes(input)) {
+                    cards[i].style.display = "flex";
+                } else {
+                    cards[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
 
