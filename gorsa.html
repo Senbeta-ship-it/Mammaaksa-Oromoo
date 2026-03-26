@@ -3,37 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gorsa - Mammaaksa Oromoo</title>
+    <title>Gorsa Guyyaa - Oromoo</title>
     <style>
-        body { font-family: 'Segoe UI', Arial, sans-serif; background: #1a1a1a; color: #fff; margin: 0; text-align: center; }
-        nav { background: #000; padding: 15px; border-bottom: 3px solid #cc0000; position: sticky; top: 0; z-index: 1000; }
-        nav a { color: white; text-decoration: none; margin: 0 12px; font-weight: bold; }
-        .container { padding: 30px 15px; max-width: 600px; margin: 0 auto; }
-        .gorsa-card { background: white; color: #333; padding: 20px; border-radius: 15px; margin-bottom: 20px; text-align: left; border-left: 8px solid #cc0000; box-shadow: 0 5px 15px rgba(0,0,0,0.4); }
-        .date { font-size: 11px; color: #888; display: block; margin-top: 10px; font-style: italic; }
-        #loading { color: #ccc; margin-top: 20px; font-size: 18px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+        }
+
+        /* Menu */
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 15px 0;
+            border-bottom: 3px solid #f59e0b; /* Halluu Gold */
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+        nav a:hover { color: #f59e0b; }
+
+        /* Header */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+        }
+        header h1 { color: #f59e0b; font-size: 2rem; margin-bottom: 10px; }
+
+        /* Grid Layout */
+        .gorsa-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Card Design */
+        .g-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(245, 158, 11, 0.2);
+            padding: 25px;
+            border-radius: 15px;
+            position: relative;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        .g-card:hover {
+            background: rgba(245, 158, 11, 0.1);
+            transform: translateY(-5px);
+            border-color: #f59e0b;
+        }
+
+        .g-icon {
+            font-size: 30px;
+            margin-right: 15px;
+            color: #f59e0b;
+        }
+
+        .g-text {
+            font-size: 16px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        footer { text-align: center; padding: 40px; opacity: 0.5; font-size: 12px; }
     </style>
 </head>
 <body>
 
-<nav>
-    <a href="index.html">Mammaaksa</a>
-    <a href="videos.html">Viidiyoo</a>
-    
-    <a href="gorsa.html" style="color: #cc0000;">Gorsa</a>
-    <a href="login.html">Login</a>
-</nav>
+    <nav>
+        <a href="index.html">Mana</a>
+        <a href="mammaaksa.html">Mammaaksa</a>
+        <a href="seenaa.html">Seenaa</a>
+        <a href="gorsa.html" style="color: #f59e0b;">Gorsa</a>
+    </nav>
 
-<div class="container">
-    <h1>Gorsa Motivation</h1>
-    <div id="loading">Gorsi fe'amaa jira...</div>
-    <div id="gorsa-list"></div>
-</div>
+    <header>
+        <h1>💡 Gorsa Guyyaa</h1>
+        <p>Beekumsa fi Ogummaa dhalootaaf</p>
+    </header>
 
-<script>
-    // 1. SHEET_ID_KEE bakka buusi (Kan URL Sheets keetii irraa fudhatte)
-    const sheetID = '1KgWpUOk7mZbxMgpakttLBiuEplNub33EZx2_i/edit?usp=drivesdk'; 
-    
+    <div class="gorsa-grid">
+        <div class="g-card"><span class="g-icon">🌟</span><p class="g-text">"Humni kee harka kee keessa jira, garuu beekumsi kee sammuu kee keessa jira."</p></div>
+        <div class="g-card"><span class="g-icon">🌱</span><p class="g-text">"Har'a yoo facaafte, bor ni haammata. Hojii gaarii facaasuun hin dagatin."</p></div>
+        <div class="g-card"><span class="g-icon">🤝</span><p class="g-text">"Tokkummaan humna, addaan ba'uun kufaatii dha."</p></div>
+        <div class="g-card"><span class="g-icon">📚</span><p class="g-text">"Barumsi furtuu jireenyaati, barachuu hin dhiisin."</p></div>
+        <div class="g-card"><span class="g-icon">🦁</span><p class="g-text">"Gootni koflaa du'a, sodataan koflaa jireenya sodaata."</p></div>
+        <div class="g-card"><span class="g-icon">⏰</span><p class="g-text">"Yeroon qarshii caala, yeroo kee hojii bu'aa qabutti fayyadami."</p></div>
+        <div class="g-card"><span class="g-icon">⛰️</span><p class="g-text">"Obsi gufuu hunda dabsata, obsa qabaadhu."</p></div>
+        <div class="g-card"><span class="g
     // URL CSV bifa kanaan fetch gochuuf
     const url = `https://docs.google.com/spreadsheets/d/${sheetID}/export?format=csv`;
 
